@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODi - الترحيب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <img id="onboarding-img" src="07.png" alt="مرحبًا بك في FOODi" width="300">
+        <button id="next-btn">التالي</button>
+    </div>
+
+    <script>
+        let images = ["07.png", "08.png", "09.png"]; // صور الترحيب
+        let index = 0;
+        let imgElement = document.getElementById("onboarding-img");
+        let nextButton = document.getElementById("next-btn");
+
+        nextButton.addEventListener("click", function () {
+            if (index < images.length - 1) {
+                index++;
+                imgElement.src = images[index];
+            } else {
+                window.location.href = "home.html"; // الانتقال إلى الصفحة الرئيسية بعد آخر شاشة
+            }
+        });
+    </script>
+</body>
+</html>
