@@ -3,67 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOODi - موقع الوصفات</title>
+    <title>FOODi - تحميل</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #fff7f0;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #e74c3c;
-            color: white;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px;
-        }
-        .gallery img {
-            width: 300px;
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 <body>
+    <div class="loading-container">
+        <img id="loading-img" src="01.png" alt="تحميل FOODi">
+    </div>
 
-    <header>
-        <h1>FOODi - معرض الوصفات</h1>
-        <p>اكتشف وصفات جديدة بناءً على مكوناتك!</p>
-    </header>
+    <script>
+        let images = ["01.png", "02.png", "03.png", "04.png", "05.png"];
+        let index = 0;
+        let imgElement = document.getElementById("loading-img");
 
-    <section class="gallery">
-        <img src="01.png" alt="وصفة 1">
-        <img src="02.png" alt="وصفة 2">
-        <img src="03.png" alt="وصفة 3">
-        <img src="04.png" alt="وصفة 4">
-        <img src="05.png" alt="وصفة 5">
-        <img src="06.png" alt="وصفة 6">
-        <img src="07.png" alt="وصفة 7">
-        <img src="08.png" alt="وصفة 8">
-        <img src="09.png" alt="وصفة 9">
-        <img src="10.png" alt="وصفة 10">
-        <img src="11.png" alt="وصفة 11">
-        <img src="12.png" alt="وصفة 12">
-        <img src="13.png" alt="وصفة 13">
-        <img src="14.png" alt="وصفة 14">
-        <img src="15.png" alt="وصفة 15">
-        <img src="16.png" alt="وصفة 16">
-        <img src="17.png" alt="وصفة 17">
-        <img src="18.png" alt="وصفة 18">
-        <img src="19.png" alt="وصفة 19">
-    </section>
-
+        setInterval(() => {
+            if (index < images.length - 1) {
+                index++;
+                imgElement.src = images[index];
+            } else {
+                window.location.href = "signup.html"; // بعد التحميل، الانتقال إلى صفحة التسجيل
+            }
+        }, 1500);
+    </script>
 </body>
 </html>
