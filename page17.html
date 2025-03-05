@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODi - اسأل الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 اسأل الذكاء الاصطناعي عن أي وصفة!</h1>
+        <form id="chat-form">
+            <label for="question">اكتب سؤالك:</label>
+            <input type="text" id="question" required>
+            <button type="submit">🔍 أرسل</button>
+        </form>
+        <p id="response"></p>
+        <a href="home.html">🔙 العودة إلى الصفحة الرئيسية</a>
+    </div>
+
+    <script>
+        document.getElementById("chat-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let question = document.getElementById("question").value;
+            document.getElementById("response").innerText = "🤖 جاري البحث عن الإجابة...";
+            
+            setTimeout(() => {
+                document.getElementById("response").innerText = "🍲 الذكاء الاصطناعي يقترح عليك تجربة وصفة بيتزا المارجريتا!";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
