@@ -8,20 +8,13 @@
 </head>
 <body>
     <div class="signup-container">
-        <h1>🚀 تسجيل الدخول إلى FOODi</h1>
-        <form id="signup-form">
-            <label>الاسم:</label>
-            <input type="text" required>
-            <label>البريد الإلكتروني:</label>
-            <input type="email" required>
-            <button type="submit">✅ تسجيل</button>
-        </form>
+        <img src="06.png" alt="تسجيل الدخول">
+        <button id="next-btn">التالي</button>
     </div>
 
     <script>
-        document.getElementById("signup-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            window.location.href = "onboarding.html"; // بعد التسجيل، الانتقال إلى شاشات الترحيب
+        document.getElementById("next-btn").addEventListener("click", function() {
+            window.location.href = "onboarding.html"; // الانتقال لشاشات الترحيب
         });
     </script>
 </body>
