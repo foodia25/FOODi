@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOODi - التسجيل</title>
+    <title>FOODi - تسجيل الدخول</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="signup-container">
-        <img src="06.png" alt="تسجيل الدخول" width="300">
-        <h2>تسجيل الدخول إلى FOODi</h2>
+        <h1>🚀 تسجيل الدخول إلى FOODi</h1>
         <form id="signup-form">
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" required>
-
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" required>
-
-            <label for="city">المدينة:</label>
-            <input type="text" id="city" required>
-
-            <button type="submit">تسجيل الدخول</button>
+            <label>الاسم:</label>
+            <input type="text" required>
+            <label>البريد الإلكتروني:</label>
+            <input type="email" required>
+            <button type="submit">✅ تسجيل</button>
         </form>
     </div>
 
     <script>
         document.getElementById("signup-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // منع إعادة تحميل الصفحة
-            window.location.href = "home.html"; // بعد التسجيل، الانتقال إلى الصفحة الرئيسية
+            event.preventDefault();
+            window.location.href = "onboarding.html"; // بعد التسجيل، الانتقال إلى شاشات الترحيب
         });
     </script>
 </body>
