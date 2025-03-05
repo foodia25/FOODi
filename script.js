@@ -1,20 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const recipes = [
-        { name: "شكشوكة بالفول", img: "https://via.placeholder.com/200" },
-        { name: "طريقة الممبار", img: "https://via.placeholder.com/200" },
-        { name: "الأرز المكسيكي", img: "https://via.placeholder.com/200" },
-        { name: "دجاج بالكاري", img: "https://via.placeholder.com/200" },
-    ];
+    let progress = 0;
+    const progressBar = document.querySelector(".progress");
 
-    const recipesContainer = document.getElementById("recipes");
-    
-    recipes.forEach(recipe => {
-        const recipeElement = document.createElement("div");
-        recipeElement.classList.add("recipe");
-        recipeElement.innerHTML = `
-            <img src="${recipe.img}" alt="${recipe.name}">
-            <h3>${recipe.name}</h3>
-        `;
-        recipesContainer.appendChild(recipeElement);
-    });
+    function loadPage() {
+        if (progress < 100) {
+            progress += 5;
+            progressBar.style.width = progress + "%";
+            setTimeout(loadPage, 300);
+        } else {
+            window.location.href = "login.html"; // الانتقال إلى صفحة تسجيل الدخول بعد التحميل
+        }
+    }
+
+    loadPage();
 });
