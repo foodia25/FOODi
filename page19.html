@@ -7,40 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>✍️ شاركنا رأيك في FOODi</h1>
-        <form id="comment-form">
-            <label for="name">اسمك:</label>
-            <input type="text" id="name" required>
-            
-            <label for="comment">تعليقك:</label>
-            <textarea id="comment" required></textarea>
-
-            <button type="submit">📩 إرسال</button>
-        </form>
-
-        <div id="comments-section">
-            <h2>📝 التعليقات:</h2>
-            <ul id="comments-list"></ul>
-        </div>
-
-        <a href="home.html">🔙 العودة إلى الصفحة الرئيسية</a>
+    <div class="image-container">
+        <img src="19.png" alt="تعليقات الزوار">
     </div>
-
-    <script>
-        document.getElementById("comment-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let name = document.getElementById("name").value;
-            let comment = document.getElementById("comment").value;
-            let commentList = document.getElementById("comments-list");
-
-            let newComment = document.createElement("li");
-            newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
-            commentList.appendChild(newComment);
-
-            document.getElementById("name").value = "";
-            document.getElementById("comment").value = "";
-        });
-    </script>
 </body>
 </html>
